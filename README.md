@@ -35,11 +35,14 @@ Kami menggunakan 4 dataset dengan karakteristik unik:
 * **Hasil:** Akurasi **77%**, namun Recall untuk kelas risiko kematian masih perlu ditingkatkan (55%).
 * **Analisis:** Tantangan utama adalah ketidakseimbangan data (*imbalanced*), disarankan menggunakan teknik SMOTE ke depannya.
 
-### 3. Stock Price Prediction 
-* **Dataset:** Historical Stock Data (Time-Series).
-* **Tugas:** Regresi prediksi harga penutupan (*Close Price*).
-* **Hasil:** Model mengalami *Overfitting* (Gap besar antara Training & Validation Loss).
-* **Analisis:** Model Neural Network terlalu kompleks untuk jumlah data time-series yang terbatas. Pendekatan LSTM mungkin lebih cocok dibandingkan MLP standar.
+### 3. Air Quality Prediction 
+* **Dataset:** [UCI Air Quality / Beijing Multi-Site](https://archive.ics.uci.edu/dataset/501/beijing+multi+site+air+quality+data)
+* **Tugas:** Prediksi tingkat polusi udara berdasarkan kondisi cuaca.
+* **Model:** Neural Network (Hidden Layers: 64 & 32 neuron).
+* **Hasil:** Model berhasil memetakan hubungan non-linear dengan akurasi tinggi.
+* **Analisis:**
+    * **Feature Engineering:** Penggunaan *One-Hot Encoding* pada fitur arah angin (`wd`) dan normalisasi data sangat krusial.
+    * **Arsitektur:** Struktur model dengan dua lapisan tersembunyi terbukti efektif menangkap pola kompleks antara cuaca dan polutan.
 
 ### 4. Hotel Booking Demand 
 * **Dataset:** [Kaggle Hotel Booking Demand](https://www.kaggle.com/datasets/jessemostipak/hotel-booking-demand)
